@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Darker+Grotesque&family=Epilogue:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Lobster&family=Lora:wght@700&family=Montserrat&family=Outfit:wght@300;400;500;600&family=Overpass:wght@300;600&family=Pacifico&family=Poppins:wght@100;200;400&family=Public+Sans:wght@300;400;700&family=Roboto:wght@400;700&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- registration-form -->
+    <div class="form-page">
+        <form class="registration-form">
+            <div class="registration-form-top">
+                <div class="form-top">
+                    <h2>Sign Up</h2>
+                    <p>it's quick and easy</p>
+                </div>
+                <i class="fa-solid fa-xmark registration-form-close"></i>
+            </div>
+            <div class="new-username">
+                <input type="text" required name="name" placeholder="  name">
+                <input type="text" required name="surname" placeholder="  surname">
+            </div>
+            <input type="email tel" required name="Mobile number or email address"
+                placeholder="  Mobile number or email address">
+            <input type="password" placeholder="  Password" required>
+            <legend>date</legend>
+            <input required type="date">
+
+            <legend>Gender</legend>
+            <fieldset>
+                <label><input required id="male" type="radio" name="gender" value="male" checked> Male</label>
+                <label><input required id="female" type="radio" name="gender" value="female"> Female</label>
+            </fieldset>
+            <p class="registration-form-privacy">People who use our service may have uploaded your contact information
+                to
+                Facebook. Learn more.
+
+                By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS
+                notifications from us and can opt out at any time</p>
+            <button type="submit" class="registration-form-button">Sign Up</button>
+
+        </form>
+    </div>
+    <!-- registration-form -->
+    <div class="login-body">
+        <div class="login-shortcuts">
+            <img src="images/logo.png" class="login-logo" alt="">
+            <h2>Recent logins</h2>
+            <p>Click your picture or add an account</p>
+            <div class="shortcut-image">
+                <div class="shortcut-image-col">
+                    <img src="images/profile-pic.png" class="login-imgag" alt="">
+                    <p>Smuel Fagbems</p>
+                </div>
+                <div class="shortcut-image-col add-account">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Add Account</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="login-col">
+                <form action="" class="login-fom">
+                    <input type="text" placeholder="   Email address or phone number">
+                    <input type="password" placeholder="   Password">
+                    <button type="submit">Login</button>
+                    <a href="">forgotten password?</a>
+                </form>
+                <button class="create-account">Create New Account</button>
+            </div>
+            <p class="create-page"><a href="">create a page</a> for a celebrity, brand or bussiness</p>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script>
+        let formPage = document.querySelector(".form-page")
+        let creataAccount = document.querySelector(".create-account")
+        let registrationFormClose = document.querySelector(".registration-form-close")
+        creataAccount.onclick = () => {
+            formPage.classList.add("active");
+            console.log("shit");
+        }
+        registrationFormClose.onclick = () => {
+            formPage.classList.remove("active")
+        }
+
+
+        let loginImag = document.querySelector(".login-imgag")
+        loginImag.addEventListener("click", () => {
+            window.location.href = "homepage.html"
+        })
+    </script>
+</body>
+
+</html>
